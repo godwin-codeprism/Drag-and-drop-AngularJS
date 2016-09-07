@@ -1,0 +1,36 @@
+.transition {
+    transition: all .25s ease-in-out;
+}
+
+.item1 {
+    width: 150px;
+    height: 150px;
+    background-color: aquamarine;
+    border-radius: 75px;
+    position: absolute;
+    left: 400px;
+    top: 108px;
+}
+
+.item2 {
+    width: 150px;
+    height: 150px;
+    background-color: burlywood;
+    border-radius: 75px;
+    top: 268px;
+    left: 400px;
+}
+
+.drop {
+    width: 155px;
+    height: 155px;
+    position: relative;
+    background: grey;
+    border-radius: 75px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5) inset;
+    border:#eee 5px solid;
+    color:white;
+    display: flex;
+    font-size: large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

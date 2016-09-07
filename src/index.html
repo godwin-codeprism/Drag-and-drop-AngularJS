@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="dragAndDropApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Drag and Drop angular js</title>
+</head>
+
+<body ng-controller="mainController">
+    <div class="container">
+        <div class="page-header">
+            <h3>Drag and Drop</h3></div>
+        <draganddrop-container answer="{'1':'2','2':'1'}">
+            <div class="container">
+                <div class="drop" drop-zone="1">
+                </div>
+            </div>
+            <div class="container">
+                <div class="drop" drop-zone="2">
+                </div>
+            </div>
+            <div class="container">
+                <div class="item1" drag-item="1"></div>
+            </div>
+            <div class="container">
+                <div class="item2" drag-item="2"></div>
+            </div>
+        </draganddrop-container>
+    </div>
+</body>
+
+</html>
