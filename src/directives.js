@@ -5,7 +5,7 @@ angular.module('dragAndDropApp')
             link: function ($scope, elm, attr) {
                 var that, pos_y, pos_x, initial = [], container, dropZoneLocations = [], answersObj = {};
                 Array.prototype.slice.call(elm).forEach(function (_this, _index, _arr) {
-                    _this.querySelectorAll('[drag-item]').forEach(function (dragItem, dragItemIndex, dragItemArr) {
+                    [].forEach.call(_this.querySelectorAll('[drag-item]'), function (dragItem, dragItemIndex, dragItemArr) {
                         dragItem.style.position = 'absolute';
                         dragItem.draggable = false;
                         dragItem.style.cursor = 'move';
@@ -37,7 +37,7 @@ angular.module('dragAndDropApp')
                         document.onmousemove = drag;
                         document.onmouseup = dragend;
                     });
-                    _this.querySelectorAll('[drop-zone]').forEach(function (dropZone, dropZoneIndex, dropZoneArr) {
+                    [].forEach.call(_this.querySelectorAll('[drop-zone]'), function (dropZone, dropZoneIndex, dropZoneArr) {
                         var coords = {
                             zone: parseInt(dropZone.getAttribute('drop-zone')),
                             x: dropZone.offsetLeft,
@@ -77,10 +77,10 @@ angular.module('dragAndDropApp')
                                 that.style.top = obj.centerY - (that.offsetHeight / 2) + 'px';
                                 if (container.getAttribute('user-answer') !== null) {
                                     var userAns = JSON.parse(container.getAttribute('user-answer'));
-                                    if(userAns[obj.zone] !== '(na)'){
-                                        var simon = document.querySelector('[drag-item="'+userAns[obj.zone]+'"]');
-                                        var simonInitial = initial.filter(function(item){
-                                            if(simon.getAttribute('drag-item') == item.item){
+                                    if (userAns[obj.zone] !== '(na)') {
+                                        var simon = document.querySelector('[drag-item="' + userAns[obj.zone] + '"]');
+                                        var simonInitial = initial.filter(function (item) {
+                                            if (simon.getAttribute('drag-item') == item.item) {
                                                 return true;
                                             }
                                         });
@@ -108,7 +108,7 @@ angular.module('dragAndDropApp')
                 };
                 function processQuestion() {
                     var dragItemLocations = [];
-                    container.querySelectorAll('[drag-item]').forEach(function (item, index, arr) {
+                    [].forEach.call(container.querySelectorAll('[drag-item]'), function (item, index, arr) {
                         dragItemLocations.push({
                             item: item.getAttribute('drag-item'),
                             x: item.offsetLeft,
