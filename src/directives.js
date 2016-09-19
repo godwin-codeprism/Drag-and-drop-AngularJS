@@ -1,4 +1,4 @@
-angular.module('360iFrame')
+angular.module('dragAndDropApp')
     .directive('multipleResponsive', function () {
         return {
             restrict: 'E',

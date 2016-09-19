@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack -w" 
+    "build": "webpack -w"
   },
   "author": "Godwin Vinny Carole",
   "license": "MIT",
@@ -19,6 +19,8 @@
     "webpack-dev-server": "^1.15.1"
   },
   "dependencies": {
-    "angular": "^1.5.8"
+    "angular": "^1.5.8",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.0"
   }
 }
